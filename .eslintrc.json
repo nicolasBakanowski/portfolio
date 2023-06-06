@@ -16,5 +16,11 @@
   ],
   "rules": {
     // Agrega tus reglas personalizadas aquí
+  },
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
