@@ -3,6 +3,8 @@ import React from 'react'
 import {Cursor, useTypewriter} from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import Link  from 'next/link'
+import Image from 'next/image';
+
 type Props = {}
 
 const Hero = (props: Props) => {
@@ -14,8 +16,13 @@ const Hero = (props: Props) => {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles/>
-        <img className='relative rounded-full h-32 w-32 mx-auto object-cover' 
-        src="https://live.staticflickr.com/65535/52938424672_bb2d915944_o_d.jpg" alt="" />
+        <Image
+            src="https://live.staticflickr.com/65535/52938424672_bb2d915944_o_d.jpg"
+            alt=""
+            width={150}
+            height={150}
+            className="relative rounded-full h-32 w-32 mx-auto object-cover"
+        />
         <div>
             <h2 className='text-sm uppercase text-yellow-50 pb-2 tracking-[15px]'>
                 Software Developer

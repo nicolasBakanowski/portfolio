@@ -1,6 +1,7 @@
 'use client'
 import React  from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image';
 type Props = {}
 
 const ExperienceCard = (props: Props) => {
@@ -24,8 +25,13 @@ const ExperienceCard = (props: Props) => {
                 fullstack 
             </p>
             <div className='flex space-x-2 my-2'>
-                <img className='h-10 w-10 rounded-full' src="https://live.staticflickr.com/65535/52951904516_9676b728de_o_d.jpg" alt="" />
-                {/* tech used */}
+            <Image
+                src="https://live.staticflickr.com/65535/52951904516_9676b728de_o_d.jpg"
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full"
+            />                {/* tech used */}
             </div>
             <p className='uppercase py-5 text-gray-300'>started work ..  -   ended..</p>
             <ul className='list-disc space-y-4 ml-5 text-lg'></ul>
