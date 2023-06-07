@@ -5,10 +5,8 @@ import BackgroundCircles from './BackgroundCircles'
 import Link from 'next/link'
 import Image from 'next/image'
 
-type Props = {}
-
-const Hero = (props: Props) => {
-  const [text, count] = useTypewriter({
+const Hero = () => {
+  const [text] = useTypewriter({
     words: ['Developer', 'Designer', 'Creator'],
     loop: true,
     delaySpeed: 3000,

@@ -2,9 +2,8 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
-type Props = {}
 
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <header className="sticky top-0 flex items-start justify-between max-w-7x1 mx-10 z-20 xl:items-center">
       <motion.div
