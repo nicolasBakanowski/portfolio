@@ -4,8 +4,22 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 type Props = {
   urlArray?: Array<String>
+  companyImage?: string
+  companyName?: string
+  started?: string
+  ended?: string
+  type?: string
+  summary?: Array<String>
 }
-const ExperienceCard = ({ urlArray }: Props) => {
+const ExperienceCard = ({
+  urlArray,
+  companyImage,
+  companyName,
+  started,
+  ended,
+  summary,
+  type,
+}: Props) => {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl-:w[900px] snap-center bg-[#292929] p-10
@@ -20,12 +34,12 @@ const ExperienceCard = ({ urlArray }: Props) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
-        src="https://live.staticflickr.com/65535/52951904516_9676b728de_o_d.jpg"
+        src={companyImage}
         alt=""
       ></motion.img>
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light"> DEVELOPER </h4>
-        <p className="font-bolt text-2xl mt-1">fullstack</p>
+        <h4 className="text-4xl font-light uppercase"> {companyName} </h4>
+        <p className="font-bolt text-2xl mt-1">{type}</p>
         <div className="flex space-x-2 my-2">
           {urlArray &&
             urlArray.map((url, index) => (
@@ -36,10 +50,9 @@ const ExperienceCard = ({ urlArray }: Props) => {
                 <Image src={url.toString()} alt="" width={40} height={40} />
               </div>
             ))}
-          {/* tech used */}
         </div>
         <p className="uppercase py-5 text-gray-300">
-          started work .. - ended..
+          started work-{started} -ended-{ended}
         </p>
         <ul className="list-disc space-y-4 ml-5 text-lg"></ul>
         <li>Summary point</li>
