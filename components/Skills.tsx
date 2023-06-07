@@ -13,6 +13,7 @@ const Skills = () => {
     'https://live.staticflickr.com/65535/52957472470_367e0bccfd_b_d.jpg', //flask
     'https://live.staticflickr.com/65535/52957089086_6659206b4b_b_d.jpg', //mongo
     'https://live.staticflickr.com/65535/52957232644_aa99059db3_o_d.png', //mysql
+    'https://live.staticflickr.com/65535/52956535452_d1150f6166_o_d.png', //docker
   ]
   return (
     <motion.div
