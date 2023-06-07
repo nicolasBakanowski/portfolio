@@ -2,8 +2,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-
-const ExperienceCard = () => {
+type Props = {
+  urlArray?: Array<String>
+}
+const ExperienceCard = ({ urlArray }: Props) => {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl-:w[900px] snap-center bg-[#292929] p-10
@@ -25,13 +27,15 @@ const ExperienceCard = () => {
         <h4 className="text-4xl font-light"> DEVELOPER </h4>
         <p className="font-bolt text-2xl mt-1">fullstack</p>
         <div className="flex space-x-2 my-2">
-          <Image
-            src="https://live.staticflickr.com/65535/52951904516_9676b728de_o_d.jpg"
-            alt=""
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full"
-          />{' '}
+          {urlArray &&
+            urlArray.map((url, index) => (
+              <div
+                key={index}
+                className="h-10 w-10 rounded-full overflow-hidden"
+              >
+                <Image src={url.toString()} alt="" width={40} height={40} />
+              </div>
+            ))}
           {/* tech used */}
         </div>
         <p className="uppercase py-5 text-gray-300">
