@@ -42,7 +42,15 @@ const Experience = () => {
           companyName={'toptive'}
           started={'12/02'}
           ended={'30/10'}
-          summary={[]}
+          summary={[
+            'programador junior',
+            'react-native',
+            'react',
+            'next',
+            'nodejs',
+            'mongodb',
+            'mysql',
+          ]}
           type={'fullStack developer'}
         />
         <ExperienceCard
@@ -51,7 +59,16 @@ const Experience = () => {
           companyName={'alkemy'}
           started={'12/02'}
           ended={'30/10'}
-          summary={[]}
+          summary={[
+            'bootcamp para trainee',
+            'trabajo en equipo',
+            'backend',
+            'nodejs',
+            'rest',
+            'testing',
+            'documentacion',
+            'postman',
+          ]}
           type={'backend bootcamp'}
         />
         <ExperienceCard
@@ -60,7 +77,14 @@ const Experience = () => {
           companyName={'iteclabs'}
           started={'12/02'}
           ended={'30/10'}
-          summary={[]}
+          summary={[
+            'programador trainee',
+            'aplicacion monolitica',
+            'trabajo en equipo',
+            'python',
+            'flask',
+            'boostrap',
+          ]}
           type={'fullStack developer'}
         />
       </div>

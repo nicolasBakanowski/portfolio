@@ -55,11 +55,7 @@ const ExperienceCard = ({
           started work-{started} -ended-{ended}
         </p>
         <ul className="list-disc space-y-4 ml-5 text-lg"></ul>
-        <li>Summary point</li>
-        <li>Summary point</li>
-        <li>Summary point</li>
-        <li>Summary point</li>
-        <ul>summary</ul>
+        {summary && summary.map((point, index) => <li>{point}</li>)}
       </div>
     </article>
   )
