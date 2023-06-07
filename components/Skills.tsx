@@ -6,6 +6,7 @@ import Skill from './Skill'
 const Skills = () => {
   const techs = [
     'https://live.staticflickr.com/65535/52955118245_ca86392979_b_d.jpg', //js
+    'https://live.staticflickr.com/65535/52957606073_d46e2e0a14_t_d.jpg', //node
     'https://live.staticflickr.com/65535/52957097631_caef7366ff_o_d.png', //ts
     'https://live.staticflickr.com/65535/52957090881_9cf9122bc9_b_d.jpg', //react
     'https://live.staticflickr.com/65535/52957233194_ec6ea38bf7_o_d.png', //next
