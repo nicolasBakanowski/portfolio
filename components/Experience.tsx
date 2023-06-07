@@ -39,6 +39,24 @@ const Experience = () => {
         <ExperienceCard
           urlArray={techItecLabs}
           companyImage={itecLabsImage}
+          companyName={'toptive'}
+          started={'12/02'}
+          ended={'30/10'}
+          summary={[]}
+          type={'fullStack developer'}
+        />
+        <ExperienceCard
+          urlArray={techItecLabs}
+          companyImage={itecLabsImage}
+          companyName={'alkemy'}
+          started={'12/02'}
+          ended={'30/10'}
+          summary={[]}
+          type={'backend bootcamp'}
+        />
+        <ExperienceCard
+          urlArray={techItecLabs}
+          companyImage={itecLabsImage}
           companyName={'iteclabs'}
           started={'12/02'}
           ended={'30/10'}
