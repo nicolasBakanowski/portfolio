@@ -6,6 +6,10 @@ import ExperienceCard from './ExperienceCard'
 const Experience = () => {
   const itecLabsImage =
     'https://live.staticflickr.com/65535/52951904516_9676b728de_o_d.jpg'
+  const topTiveImage =
+    'https://live.staticflickr.com/65535/52958568457_db6dc578e5_o_d.png'
+  const alkemyImage =
+    'https://live.staticflickr.com/65535/52959310969_3668d9d160_o_d.png'
 
   const techItecLabs = [
     'https://live.staticflickr.com/65535/52957472725_c88bcbb8be_b_d.jpg', //python
@@ -27,7 +31,7 @@ const Experience = () => {
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap snap-mandatory">
         <ExperienceCard
           urlArray={techItecLabs}
-          companyImage={itecLabsImage}
+          companyImage={topTiveImage}
           companyName={'toptive'}
           started={'12/02'}
           ended={'30/10'}
@@ -44,7 +48,7 @@ const Experience = () => {
         />
         <ExperienceCard
           urlArray={techItecLabs}
-          companyImage={itecLabsImage}
+          companyImage={alkemyImage}
           companyName={'alkemy'}
           started={'12/02'}
           ended={'30/10'}
