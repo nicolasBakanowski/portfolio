@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 3px var(--neon-color), 0 0 6px var(--neon-color), 0 0 9px var(--neon-color), 0 0 12px var(--neon-color), 0 0 15px var(--neon-color), 0 0 18px var(--neon-color), 0 0 21px var(--neon-color);
+  }
+  50% {
+    text-shadow: 0 0 3px var(--neon-color), 0 0 6px var(--neon-color), 0 0 9px var(--neon-color), 0 0 12px var(--neon-color), 0 0 15px var(--neon-color), 0 0 18px var(--neon-color), 0 0 21px var(--neon-color);
+  }
+  100% {
+    text-shadow: 0 0 3px var(--neon-color), 0 0 6px var(--neon-color), 0 0 9px var(--neon-color), 0 0 12px var(--neon-color), 0 0 15px var(--neon-color), 0 0 18px var(--neon-color), 0 0 21px var(--neon-color);
+  }
+}
+
+.neon-text-white {
+  color: white; /* Cambiar el color del texto a negro */
+  --neon-color: #d8dcfd42; /* Cambiar el color del resplandor */
+  animation: neon-glow 1.5s ease-in-out infinite;
+}
+.neon-text-black {
+  color: black; /* Cambiar el color del texto a negro */
+  --neon-color: #f881ee; /* Cambiar el color del resplandor */
+  animation: neon-glow 1.5s ease-in-out infinite;
+}
+@theme {
+  --color-ciberpink: #c169c0;
+  --color-ciberpinkdown: #572f56;
+  --color-ciberbackdark: #0e0e1c;
+}
