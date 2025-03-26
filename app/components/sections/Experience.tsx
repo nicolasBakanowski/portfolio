@@ -1,19 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaTools } from "react-icons/fa";
+import ExperienceCard from "../ExperienceCard";
 
 const experiences = [
-  { title: "Desarrollo Web", description: "Experiencia en Next.js, React y Tailwind CSS.", side: "left" },
-  { title: "Desarrollo Móvil", description: "Creación de apps con React Native.", side: "right" },
-  { title: "Backend y APIs", description: "Manejo de Node.js, Express y bases de datos SQL y NoSQL.", side: "left" },
-  { title: "Animaciones y UI/UX", description: "Uso de Framer Motion para experiencias dinámicas.", side: "right" },
+  {
+    role: "Desarrollador Full Stack",
+    company: "Toptive",
+    achievements: ["Experiencia en Next.js, React y React-native "],
+    startDate: "03/2022",
+    endDate: "02/2023",
+    side: "left",
+  },
+  {
+    role: "Desarrollador Backend",
+    company: "Alkemy",
+    achievements: ["Creación de APIs con Node.js, MySql y Express."],
+    startDate: "12/2021",
+    endDate: "01/2022",
+    side: "right",
+  },
+  {
+    role: "Desarrollador Full Stack",
+    company: "ItecLabs",
+    achievements: ["Manejo de Python, JavaScript, HTML y CSS."],
+    startDate: "11/2020",
+    endDate: "12/2021",
+    side: "left",
+  },
+
 ];
 
 const Experience = () => {
   return (
     <section id="experience" className="relative py-20 px-6 flex flex-col items-center text-center">
-      <h2 className="text-4xl md:text-5xl font-bold neon-text-white mb-16">Mi Experiencia</h2>
+      <h2 className="text-4xl md:text-5xl font-bold neon-text-white mb-2">Mi Experiencia</h2>
 
       {/* Separador */}
       <div className="w-full flex justify-center my-10">
@@ -40,12 +61,13 @@ const Experience = () => {
               className={`relative flex ${exp.side === "left" ? "justify-start" : "justify-end"}`}
             >
               <div className="w-1/2 flex items-center">
-                <div className="bg-black/75 border-2 border-ciberpink text-white p-6 rounded-lg shadow-lg max-w-xs">
-                  <h3 className="text-xl font-semibold neon-text-white flex items-center gap-2">
-                    <FaTools /> {exp.title}
-                  </h3>
-                  <p className="mt-2 text-gray-300">{exp.description}</p>
-                </div>
+                <ExperienceCard
+                  role={exp.role}
+                  company={exp.company}
+                  achievements={exp.achievements}
+                  startDate={exp.startDate}
+                  endDate={exp.endDate}
+                />
               </div>
               {/* Conector */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-ciberpink rounded-full border-4 border-black" />
