@@ -2,8 +2,24 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+    const [scrollY, setScrollY] = useState(0);
+
+    // Detectar el scroll y actualizar el valor de scrollY
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Calcular la opacidad en función del scroll
+    const overlayOpacity = Math.min(scrollY / 500, 1); // Esto hará que se oscurezca más rápido, ajustable
+
     return (
         <section id="home" className="relative flex flex-col justify-center items-center h-screen text-center px-6">
             {/* Imagen de fondo optimizada */}
@@ -18,8 +34,16 @@ const Home = () => {
                 />
             </div>
 
-            {/* Overlay para mejorar contraste */}
+            {/* Overlay para mejorar contraste con oscurecimiento inicial */}
             <div className="absolute inset-0 bg-black/75" />
+
+            {/* Overlay con gradiente que oscurece más al hacer scroll */}
+            <div
+                className="absolute inset-0 transition-all duration-300"
+                style={{
+                    background: `linear-gradient(to bottom, rgba(9, 17, 21, 0) 0%, rgba(9, 17, 21, ${overlayOpacity}) 100%)`,
+                }}
+            />
 
             {/* Contenido */}
             <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
