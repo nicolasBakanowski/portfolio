@@ -7,14 +7,16 @@ const Home = () => {
     return (
         <section id="home" className="relative flex flex-col justify-center items-center h-screen text-center px-6">
             {/* Imagen de fondo optimizada */}
-            <Image
-                src="/backgroundHome.jpg"
-                alt="Cyberpunk Background"
-                layout="fill"
-                objectFit="cover"
-                quality={90}
-                className="-z-10"
-            />
+            <div className="absolute inset-0 w-full h-full">
+                <Image
+                    src="/backgroundHome.jpg"
+                    alt="Cyberpunk Background"
+                    quality={90}
+                    className="-z-10 object-cover w-full h-full"
+                    width={1920}
+                    height={1080}
+                />
+            </div>
 
             {/* Overlay para mejorar contraste */}
             <div className="absolute inset-0 bg-black/75" />
