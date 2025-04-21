@@ -78,7 +78,7 @@ const Experience: React.FC = () => {
         }}
       />
 
-      <h2 className="text-4xl md:text-5xl font-bold neon-text-white mb-2 relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 drop-shadow-lg">
+      <h2 className="text-4xl md:text-5xl font-semibolt font-[Orbitron] neon-text-white mb-2 relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 drop-shadow-lg">
         Mi Experiencia
       </h2>
 
@@ -100,9 +100,9 @@ const Experience: React.FC = () => {
               initial={{ opacity: 0, x: exp.side === "left" ? -50 : 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: index * 0.3 }}
-              className={`relative flex ${exp.side === "left" ? "justify-start" : "justify-end"}`}
+              className={`relative flex ${exp.side === "left" ? "justify-start sm:pl-10" : "justify-end sm:pr-10"}`}
             >
-              <div className="w-1/2 flex items-center">
+              <div className="w-1/2  flex justify-center items-center">
                 <ExperienceCard
                   role={exp.role}
                   company={exp.company}

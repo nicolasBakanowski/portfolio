@@ -53,7 +53,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold neon-text-white"
+                        className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibolt font-[Orbitron] neon-text-white"
                     >
                         Desarrollo Web y Móvil a Tu Medida
                     </motion.h1>
@@ -61,7 +61,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.5, delay: 0.5 }}
-                        className="mt-6 neon-text-white text-base sm:text-lg md:text-xl max-w-2xl mx-auto"
+                        className="mt-6 neon-text-white font-[Inter] text-base sm:text-lg md:text-xl max-w-2xl mx-auto"
                     >
                         Innovación constante para crear experiencias digitales únicas.
                     </motion.p>
