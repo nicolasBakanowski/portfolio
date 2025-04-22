@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import ExperienceCard from "../ExperienceCard";
+import CompanyCard from "../CompanyCard";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -16,8 +17,8 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Desarrollador Full Stack",
-    company: "Toptive",
+    role: "Desarrollador FullStack",
+    company: "TopTIve",
     achievements: ["Experiencia en Next.js, React y React Native"],
     startDate: "03/2022",
     endDate: "02/2023",
@@ -32,7 +33,7 @@ const experiences: ExperienceItem[] = [
     side: "right",
   },
   {
-    role: "Desarrollador Full Stack",
+    role: "Desarrollador FullStack",
     company: "ItecLabs",
     achievements: ["Manejo de Python, JavaScript, HTML y CSS."],
     startDate: "11/2020",
@@ -94,26 +95,46 @@ const Experience: React.FC = () => {
       <div className="relative w-full max-w-4xl z-10">
         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 shadow-[0_0_10px_#ff00ff] bg-ciberpink h-full drop-shadow-lg" />
         <div className="flex flex-col space-y-12">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: exp.side === "left" ? -50 : 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: index * 0.3 }}
-              className={`relative flex ${exp.side === "left" ? "justify-start sm:pl-10" : "justify-end sm:pr-10"}`}
-            >
-              <div className="w-1/2  flex justify-center items-center">
-                <ExperienceCard
-                  role={exp.role}
-                  company={exp.company}
-                  achievements={exp.achievements}
-                  startDate={exp.startDate}
-                  endDate={exp.endDate}
-                />
-              </div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-ciberpink rounded-full border-4 border-black shadow-xl" />
-            </motion.div>
-          ))}
+          {experiences.map((exp, index) => {
+            const isLeft = exp.side === "left";
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: index * 0.3 }}
+                className="relative flex justify-between"
+              >
+                <div className="w-1/2 flex justify-center items-center">
+                  {isLeft ? (
+                    <ExperienceCard
+                      role={exp.role}
+                      company={exp.company}
+                      achievements={exp.achievements}
+                      startDate={exp.startDate}
+                      endDate={exp.endDate}
+                    />
+                  ) : (
+                    <CompanyCard company={exp.company} />
+                  )}
+                </div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-ciberpink rounded-full border-4 border-black shadow-xl" />
+                <div className="w-1/2 flex justify-center items-center">
+                  {!isLeft ? (
+                    <ExperienceCard
+                      role={exp.role}
+                      company={exp.company}
+                      achievements={exp.achievements}
+                      startDate={exp.startDate}
+                      endDate={exp.endDate}
+                    />
+                  ) : (
+                    <CompanyCard company={exp.company} />
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
