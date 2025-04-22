@@ -13,7 +13,6 @@ interface ExperienceCardProps {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
     role,
-    company,
     achievements,
     startDate,
     endDate,
